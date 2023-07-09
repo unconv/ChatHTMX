@@ -24,10 +24,10 @@ file_put_contents(
     json_encode( $chat )
 );
 
-if( $_GET['new'] ?? false ) {
+if( empty( $chat["name"] ) || $chat["name"] == "Untitled chat" ) {
     $create_title = 'hx-trigger="load" hx-get="/create_title.php?chat_id='.htmlspecialchars( $_GET['chat_id'] ).'" hx-target=".chat-'.htmlspecialchars( $_GET['chat_id'] ).'"';
 } else {
     $create_title = '';
 }
 
-echo '<div class="assistant message" '.$create_title.'>'.nl2br( htmlspecialchars( $response["content"] ) ).'</div>';
+echo '<div class="assistant message" '.$create_title.'>'.nl2br( htmlspecialchars( $response["content"] ) )."name:".$chat['name'].'</div>';

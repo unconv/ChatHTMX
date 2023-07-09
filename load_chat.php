@@ -12,7 +12,6 @@ echo '</div>';
 
 ?>
 <form id="messageform" hx-post="/send_message.php" hx-target=".messages" hx-swap="beforeend">
-    <input type="hidden" name="new" value="<?php echo htmlspecialchars( $_GET['new'] ?? "false" ); ?>" />
     <input type="hidden" name="chat_id" value="<?php echo htmlspecialchars( $_GET['chat_id'] ); ?>" />
     <input type="text" name="message" />
     <button>Send</button>

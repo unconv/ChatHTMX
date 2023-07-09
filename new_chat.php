@@ -16,4 +16,4 @@ file_put_contents(
     json_encode( $chat )
 );
 
-echo '<button hx-get="/load_chat.php?chat_id='.$chat_id.'&new=true" hx-target="main" hx-trigger="click, load" class="chat-'.$chat_id.'">' . htmlspecialchars( $chat["name"] ) . '</button>';
+echo '<button hx-get="/load_chat.php?chat_id='.$chat_id.'" hx-target="main" hx-trigger="click, load" class="chat-'.$chat_id.'">' . htmlspecialchars( $chat["name"] ) . '</button>';

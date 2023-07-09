@@ -14,6 +14,6 @@ file_put_contents(
     json_encode( $chat )
 );
 
-echo '<div class="user message" hx-trigger="load" hx-get="/get_response.php?chat_id='.htmlspecialchars( $_POST['chat_id'] ).'&new='.htmlspecialchars( $_POST['new'] ?? "false" ).'" hx-target=".messages" hx-swap="beforeend">'.nl2br( htmlspecialchars( $_POST['message'] ) ).'</div>';
+echo '<div class="user message" hx-trigger="load" hx-get="/get_response.php?chat_id='.htmlspecialchars( $_POST['chat_id'] ).'" hx-target=".messages" hx-swap="beforeend">'.nl2br( htmlspecialchars( $_POST['message'] ) ).'</div>';
 
 echo '<script>messageform.reset()</script>';
