@@ -11,4 +11,4 @@ $ php -S localhost:8080
 
 ## Video
 
-Watch me build it: [link coming soon]
+Watch me build it: https://www.youtube.com/watch?v=QIbL6ckCSbI
