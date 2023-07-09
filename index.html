@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatHTMX</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <button hx-post="/new_chat.php"
+                hx-target="#chats"
+                hx-swap="afterbegin"
+                >+ New chat</button>
+
+        <div id="chats" hx-get="/conversations.php" hx-trigger="load"></div>
+    </nav>
+    <main>
+
+    </main>
+</body>
+</html>

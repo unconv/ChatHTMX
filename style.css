@@ -1,0 +1,88 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+}
+
+nav {
+    width: 300px;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #1f1a1a;
+    color: #fff;
+    height: 100%;
+}
+
+nav button {
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+nav button:hover {
+    background: #d4d4d4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main form {
+    display: flex;
+    height: 50px;
+}
+
+main form input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    margin-right: 10px;
+    flex: 1;
+}
+
+main form button {
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #0b6a04;
+    color: #fff;
+    border: none;
+}
+
+.messages {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.message {
+    border-radius: 15px;
+    padding: 15px;
+    background: #f4f4f4;
+    margin-bottom: 15px;
+}
+
+.assistant.message {
+    background: #d6e6d5;
+}
