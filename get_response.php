@@ -9,6 +9,10 @@ $chat = json_decode(
 $message = end( $chat["messages"] );
 
 $chatgpt = new ChatGPT( getenv("OPENAI_API_KEY"), $_GET['chat_id'] );
+$chatgpt->loadfunction( function( $chat_id ) use ( $chat ) {
+    return $chat["messages"];
+} );
+$chatgpt->load();
 $chatgpt->umessage( $message["content"] );
 
 $response = (array)$chatgpt->response();
